@@ -578,13 +578,8 @@ void Tablero::printTablero()
     }
     
     printBotL();
-    // for (int i = 0; i < 8; i++)
-    // {
-    //     cout <<"  "<<i<<"   ";
-    // }
-    // cout << endl;
-
-
+    
+    Colorsk::sclr(240);
     
 }
 
@@ -694,7 +689,7 @@ void Tablero::printFicha(int i, int j, int point, int line)
                 this->getPiceType(this->fichas[i][j][0]),
                 this->getPiceColor(this->fichas[i][j][1])
                 );
-            std::cout << char(245) ;
+            std::cout << char(254) ;
 
             if(this->fichas[i][j][0] == 1)
             {
@@ -757,3 +752,64 @@ void Tablero::printFicha(int i, int j, int point, int line)
      
 }
 
+
+/**
+ * get the table valur of color
+*/
+int Tablero::getValTabla(int i, int j)
+{
+    return this->tabla[i][j];
+}
+
+
+/**
+ * Get the string to reprecent the required color
+*/
+
+void Tablero::showRequiredColor(int numColor)
+{
+    cout << "\n -> Color de la ficha a Mover!!:\n";
+    switch (numColor)
+    {
+    case 1:
+        cout << "\t\t DORADO: ";
+        Colorsk::sclr(6);
+        break;
+    case 2:
+        cout << "\t\t AZUL: ";
+        Colorsk::sclr(9);
+        break;
+    case 3:
+        cout << "\t\t MORADO: ";
+        Colorsk::sclr(5);
+        break;
+    case 4:
+        cout << "\t\t FUCSIA: ";
+        Colorsk::sclr(13);
+        break;
+    case 5:
+        cout << "\t\t AMARILLO: ";
+        Colorsk::sclr(14);
+        break;
+    case 6:
+        cout << "\t\t ROJO: ";
+        Colorsk::sclr(12);
+        break;
+    case 7:
+        cout << "\t\t VERDE: ";
+        Colorsk::sclr(10);
+        break;
+    case 8:
+        cout << "\t\t MARRON: ";
+        Colorsk::sclr(4);
+        break;
+    default:
+        cout << "\t\t NONE: ";
+        Colorsk::sclr(0);
+        break;
+    }
+
+    cout << char(219) << char(219) << char(219) ;
+    Colorsk::sclr(240);
+    cout << endl;
+}

@@ -29,7 +29,8 @@ public:
     bool winState();
     int getUtility();
     int getValFichas(int i, int j, int z);
-    
+    int getValTabla(int i, int j);
+    void showRequiredColor(int);
 };
 
 

@@ -113,6 +113,7 @@ int Nodo::calculateUtility()
                 //maxima utilidad
                 this->utilidad = tempUtility;
                 this->estadoMinMax = tempNodo.estado;// se iguala el estado que genera esa jugada
+                this->colH = colorHijo;
             }
         }
         
@@ -154,6 +155,7 @@ int Nodo::calculateUtility()
                 //maxima utilidad
                 this->utilidad = tempUtility;
                 this->estadoMinMax = tempNodo.estado;// se iguala el estado que genera esa jugada
+                this->colH = colorHijo;
             }
         }
         
@@ -195,6 +197,7 @@ int Nodo::calculateUtility()
                 //maxima utilidad
                 this->utilidad = tempUtility;
                 this->estadoMinMax = tempNodo.estado;// se iguala el estado que genera esa jugada
+                this->colH = colorHijo;
             }
         }
         
@@ -236,6 +239,7 @@ int Nodo::calculateUtility()
                 //maxima utilidad
                 this->utilidad = tempUtility;
                 this->estadoMinMax = tempNodo.estado;// se iguala el estado que genera esa jugada
+                this->colH = colorHijo;
             }
         }
         
@@ -277,6 +281,7 @@ int Nodo::calculateUtility()
                 //maxima utilidad
                 this->utilidad = tempUtility;
                 this->estadoMinMax = tempNodo.estado;// se iguala el estado que genera esa jugada
+                this->colH = colorHijo;
             }
         }   
 
@@ -324,6 +329,7 @@ int Nodo::calculateUtility()
                 //maxima utilidad
                 this->utilidad = tempUtility;
                 this->estadoMinMax = tempNodo.estado;// se iguala el estado que genera esa jugada
+                this->colH = colorHijo;
             }
         }
 
@@ -366,6 +372,7 @@ int Nodo::calculateUtility()
                 //maxima utilidad
                 this->utilidad = tempUtility;
                 this->estadoMinMax = tempNodo.estado;// se iguala el estado que genera esa jugada
+                this->colH = colorHijo;
             }
         }
         
@@ -408,6 +415,7 @@ int Nodo::calculateUtility()
                 //maxima utilidad
                 this->utilidad = tempUtility;
                 this->estadoMinMax = tempNodo.estado;// se iguala el estado que genera esa jugada
+                this->colH = colorHijo;
             }
         }
         
@@ -450,6 +458,7 @@ int Nodo::calculateUtility()
                 //maxima utilidad
                 this->utilidad = tempUtility;
                 this->estadoMinMax = tempNodo.estado;// se iguala el estado que genera esa jugada
+                this->colH = colorHijo;
             }
         }
         
@@ -492,6 +501,7 @@ int Nodo::calculateUtility()
                 //maxima utilidad
                 this->utilidad = tempUtility;
                 this->estadoMinMax = tempNodo.estado;// se iguala el estado que genera esa jugada
+                this->colH = colorHijo;
             }
         }
         

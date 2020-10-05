@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
 	// 	cout << "hellow word " << colour << endl;
 	// }
 	
-
+	// system("pause");
 
 	int turno=2; // 1 negras 2 blancas
 	int colorSeleced ;
@@ -109,7 +109,7 @@ int main(int argc, char const *argv[])
 				Colorsk::sclr(7);
 				cout << "[8]  " ;
 				Colorsk::sclr(Colorsk::GRIS);
-				cout << "CAFE     \n";
+				cout << "MARRON   \n";
 				Colorsk::sclr(15);
 
 				Colorsk::sclr(7);
@@ -136,6 +136,11 @@ int main(int argc, char const *argv[])
 				// select direction 
 				while (true)
 				{
+					if (colorobligatorio != -1)
+					{
+						tablerito.showRequiredColor(colorobligatorio);
+					}
+
 					cout << "Seleccione la dirección a moverse \n";
 					cout << "[1] Iquierda                  <" << char(196)  << endl;
 					cout << "[2] Diagonal izquierda Arriba \\ \n"  ;
@@ -159,6 +164,10 @@ int main(int argc, char const *argv[])
 				// numero de casillas a moverse 
 				while (true)
 				{
+					if (colorobligatorio != -1)
+						tablerito.showRequiredColor(colorobligatorio);
+					
+					
 					cout << "Ingrese la cantidad de casillas que desaea moverse \n";
 					cin >> numCasillas;
 
@@ -179,6 +188,7 @@ int main(int argc, char const *argv[])
 						}
 						else // el color si fue definido 
 						{
+							
 							vij = tablerito.getIJficha(colorobligatorio,turno);
 						}
 						
@@ -212,9 +222,11 @@ int main(int argc, char const *argv[])
 			if(aiAttempt.changed)
 			{
 				tablerito = aiAttempt.estadoMinMax;
+				colorobligatorio = aiAttempt.colH;
 				cout<<"Jugada de la IA:\n";
 				tablerito.printTablero();
 				system("pause");
+				system("cls ");
 			}
 			else
 			{
@@ -262,7 +274,7 @@ int main(int argc, char const *argv[])
 		
 	}
 	
-	cout<< "color ->" << colorobligatorio;
+	
 	
 	return 0;
 }

@@ -16,12 +16,13 @@ private:
     int utilidad;
     int typeF;
     int colorF;
-    int prfMax=6;
+    int prfMax=2;
     Tablero estado;
 
 
 public:
     int* posij;
+    int colH=0; //color del hijo
     Tablero estadoMinMax;
     bool changed = false;
 
