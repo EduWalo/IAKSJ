@@ -107,7 +107,7 @@ int main(int argc, char const *argv[])
 				Colorsk::sclr(15);
 
 				Colorsk::sclr(7);
-				cout << "[7]  " ;
+				cout << "[8]  " ;
 				Colorsk::sclr(Colorsk::GRIS);
 				cout << "CAFE     \n";
 				Colorsk::sclr(15);
